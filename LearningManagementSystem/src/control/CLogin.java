@@ -10,10 +10,7 @@ public class CLogin {
 		this.daoLogin = new DAOLogin();
 	}
 	
-	public boolean authenticate(String userId, String password) {
-		this.daoLogin.authenticate(userId, password);
-		
-		return false;
+	public String authenticate(String userId, String password) {
+		return this.daoLogin.authenticate(userId, password);
 	}
-
 }
