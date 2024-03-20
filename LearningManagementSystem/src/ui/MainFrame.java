@@ -13,7 +13,6 @@ import entity.EDirectory;
 
 public class MainFrame extends JFrame implements FrameImpl {
 	private static final long serialVersionUID = 1L;
-
 	public MainFrame() {
 		this.setTitle("Main Page");
 		this.setLayout(new BorderLayout());
