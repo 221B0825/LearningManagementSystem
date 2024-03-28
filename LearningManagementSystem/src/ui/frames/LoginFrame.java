@@ -57,7 +57,7 @@ public class LoginFrame extends JFrame implements FrameImpl{
 			if(result != null) {
 				setVisible(false);
 				JOptionPane.showMessageDialog(null, "login success :: Welcome!", "Login Success", JOptionPane.INFORMATION_MESSAGE);
-				MainFrame mainFrame = new MainFrame();
+				MainFrame mainFrame = new MainFrame(result);
 				mainFrame.setVisible(true);
 			}else {
 				JOptionPane.showMessageDialog(null, "login fail :: User Not Found", "Login Fail", JOptionPane.ERROR_MESSAGE);
