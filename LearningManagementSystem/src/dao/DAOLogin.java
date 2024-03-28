@@ -6,20 +6,22 @@ import java.util.Scanner;
 
 public class DAOLogin {
 	
-	public boolean authenticate(String inputUserId, String inputPassword) {
+
+	public String authenticate(String inputUserId, String inputPassword) {
 		
 		try {
 			Scanner scanner = new Scanner(new File("data\\user\\login.txt"));
 			while(scanner.hasNext()) {
 				String userId = scanner.next();
-				String userPassword = scanner.next();
-				if(userId.equals(inputUserId) &&  userPassword.equals(inputPassword)) {
-					return true;
+				String password = scanner.next();
+				if(inputUserId.equals(userId) && inputPassword.equals(password)) {
+					return inputUserId;
 				}
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		}
-		return false;
+		}		
+		//User Not Founded
+		return null;
 	}
 }

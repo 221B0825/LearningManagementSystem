@@ -9,10 +9,8 @@ public class CLogin {
 	public CLogin() {
 		this.daoLogin = new DAOLogin();
 	}
-	
-	public boolean authenticate(String userId, String password) {
+			
+	public String authenticate(String userId, String password) {
 		return this.daoLogin.authenticate(userId, password);
-		
 	}
-
 }
