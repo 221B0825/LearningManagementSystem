@@ -1,6 +1,6 @@
 package main;
 
-import ui.LoginFrame;
+import ui.frames.LoginFrame;
 
 public class Main {
 

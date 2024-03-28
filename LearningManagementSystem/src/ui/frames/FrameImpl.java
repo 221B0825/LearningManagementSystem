@@ -1,4 +1,4 @@
-package ui;
+package ui.frames;
 
 import java.awt.GraphicsEnvironment;
 import java.awt.Point;

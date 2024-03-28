@@ -1,4 +1,4 @@
-package ui;
+package ui.frames;
 
 import java.awt.BorderLayout;
 import java.awt.ScrollPane;
