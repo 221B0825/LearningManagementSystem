@@ -11,9 +11,8 @@ public class CLogin {
 	}
 	
 	public boolean authenticate(String userId, String password) {
-		this.daoLogin.authenticate(userId, password);
+		return this.daoLogin.authenticate(userId, password);
 		
-		return false;
 	}
 
 }
