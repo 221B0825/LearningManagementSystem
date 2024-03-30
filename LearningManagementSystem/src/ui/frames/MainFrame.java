@@ -11,14 +11,9 @@ public class MainFrame extends JFrame implements FrameImpl {
 	private static final long serialVersionUID = 1L;
 	public MainFrame(String userName) {
 		this.setTitle("Main Page");
-		this.setLayout(new BorderLayout());
 		
-		UserPanel userPanel = new UserPanel(userName);
-		this.add(BorderLayout.NORTH, userPanel);
-		
-		MainPanel mainPanel = new MainPanel();
-		this.add(BorderLayout.CENTER, mainPanel);
-		
+		MainPanel mainPanel = new MainPanel(userName);
+		this.add(mainPanel);
 		
 		this.pack();
         this.setLocation(this.calculateLocation(this));

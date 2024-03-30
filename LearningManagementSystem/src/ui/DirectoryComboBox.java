@@ -18,7 +18,7 @@ public class DirectoryComboBox extends JComboBox<String>{
 	private Vector<EDirectory> directories;
 	
 	// model data(to show as comboBoxList)
-	private DefaultComboBoxModel<String> listData;
+	private DefaultComboBoxModel<String> directoryList;
 	
 	
 	public DirectoryComboBox(SelectionHandler selectionHandler) {
@@ -27,8 +27,8 @@ public class DirectoryComboBox extends JComboBox<String>{
 		this.cDirectory = new CDirectory();
 		
 		// set model data
-		this.listData = new DefaultComboBoxModel<String>();
-		this.setModel(this.listData);
+		this.directoryList = new DefaultComboBoxModel<String>();
+		this.setModel(this.directoryList);
 	
 		// set ActionListener
 		this.addItemListener(selectionHandler);
@@ -36,11 +36,12 @@ public class DirectoryComboBox extends JComboBox<String>{
 
 	public String refresh(String path) {
 		this.directories = this.cDirectory.getItems(path);
-		this.listData.removeAllElements();
+		this.directoryList.removeAllElements();
 		
 		for(EDirectory directory : directories) {
-			this.listData.addElement(directory.getName());
+			this.directoryList.addElement(directory.getName());
 		}
+		
 		// set default selection
 		this.setSelectedIndex(0);
 		this.updateUI();
