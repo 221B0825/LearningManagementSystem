@@ -1,0 +1,9 @@
+110 기계공학과 mechanical
+111 전기공학과  electricity
+112 컴퓨터공학과 computer
+113 정보통신공학과 information
+115 신소재공학과 material
+116 에너지공학과 energy
+117 환경공학과 environmental
+118 산업공학과 industrial
+119 교통공학과 transportation

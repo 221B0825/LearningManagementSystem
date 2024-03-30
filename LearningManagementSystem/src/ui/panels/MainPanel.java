@@ -12,7 +12,8 @@ public class MainPanel extends JPanel {
 		BannerPanel slidingBannerPannel = new BannerPanel();
 		this.add(BorderLayout.NORTH,slidingBannerPannel);
 		
-		
+		DirectoryPanel directoryPanel = new DirectoryPanel();
+		this.add(BorderLayout.CENTER, directoryPanel);
 		
 	}
 

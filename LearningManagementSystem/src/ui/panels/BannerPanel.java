@@ -52,7 +52,7 @@ public class BannerPanel extends JPanel implements ActionListener {
 	    	// offsetX is always negative number
 	        offsetX = offsetX - slideSpeed;
 	        if (offsetX <= -this.getWidth()) {
-	        	System.out.println(offsetX + " "+ this.getWidth());
+	        	//System.out.println(offsetX + " "+ this.getWidth());
 	            offsetX = 0;
 	            currentImageIndex = (currentImageIndex + 1) % banners.length;
 	            paused = true;
