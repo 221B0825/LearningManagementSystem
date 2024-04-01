@@ -1,7 +1,6 @@
 package ui.panels;
 
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,9 +22,7 @@ public class BannerPanel extends JPanel implements ActionListener {
 	private boolean paused = true;
 
 	public BannerPanel() {
-		
-		this.setPreferredSize(new Dimension(972	,386));
-		
+		this.setPreferredSize(new Dimension(672	,128));
 		
 		// set the first delay: 3-second
 		this.timer = new Timer(3000, this);

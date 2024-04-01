@@ -1,14 +1,14 @@
 package ui.panels;
 
-import java.awt.BorderLayout;
-import java.awt.GridLayout;
+import java.awt.Dimension;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-import java.util.GregorianCalendar;
 
+import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.border.EmptyBorder;
 
 import domain.Path;
 import ui.DirectoryComboBox;
@@ -26,6 +26,7 @@ public class DirectoryPanel extends JPanel {
 	public DirectoryPanel() {
 		
 		// set attribute
+		
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
 		// set eventHandler
@@ -33,13 +34,23 @@ public class DirectoryPanel extends JPanel {
 		
 		// ----- ComboBox Panel -----
 		JPanel comboBoxPanel = new JPanel();
+		comboBoxPanel.setLayout(new BoxLayout(comboBoxPanel, BoxLayout.X_AXIS));
 		this.campusComboBox = new DirectoryComboBox(this.selectionHandler);
 		this.collegeComboBox = new DirectoryComboBox(this.selectionHandler);
 		this.departmentComboBox = new DirectoryComboBox(this.selectionHandler);
 		
+		// set comboBox attributes
+		this.campusComboBox.setBorder(new EmptyBorder(0, 5, 0, 5));
+		this.collegeComboBox.setBorder(new EmptyBorder(0,  5, 0, 5));
+		this.departmentComboBox.setBorder(new EmptyBorder(0, 5, 0, 5));
+		
+		comboBoxPanel.add(Box.createHorizontalGlue());
+		
 		comboBoxPanel.add(campusComboBox);
 		comboBoxPanel.add(collegeComboBox);
 		comboBoxPanel.add(departmentComboBox);
+		
+		comboBoxPanel.add(Box.createHorizontalGlue());
 		// --------------------------
 		
 		// ----- Lecture Panel -----
@@ -49,7 +60,7 @@ public class DirectoryPanel extends JPanel {
 		JScrollPane scrollpane = new JScrollPane();
 		this.lectureTable = new LectureTable();
 		scrollpane.setViewportView(this.lectureTable);
-	
+		scrollpane.setPreferredSize(new Dimension(672, 300));
 		lecturePanel.add(scrollpane);
 		// -------------------------
 		
