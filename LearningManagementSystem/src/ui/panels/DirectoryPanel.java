@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 
+import domain.Attributes;
 import domain.Path;
 import ui.DirectoryComboBox;
 import ui.LectureTable;
@@ -55,12 +56,11 @@ public class DirectoryPanel extends JPanel {
 		
 		// ----- Lecture Panel -----
 		JPanel lecturePanel = new JPanel();
-		this.lectureTable = new LectureTable();
 		
 		JScrollPane scrollpane = new JScrollPane();
 		this.lectureTable = new LectureTable();
 		scrollpane.setViewportView(this.lectureTable);
-		scrollpane.setPreferredSize(new Dimension(672, 300));
+		scrollpane.setPreferredSize(new Dimension(Attributes.COMMON_WIDTH.getValue(), Attributes.LECTURE_HEIGHT.getValue()));
 		lecturePanel.add(scrollpane);
 		// -------------------------
 		
