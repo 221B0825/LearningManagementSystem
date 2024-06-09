@@ -8,11 +8,11 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 import domain.Attributes;
-import ui.LectureTable;
+import ui.MainLectureTable;
 
 public class BasketPanel extends JPanel {
 	
-	private LectureTable basketTable;
+	private MainLectureTable basketTable;
 
 	public BasketPanel(String userName) {
 		this.setLayout(new BorderLayout());
@@ -25,7 +25,7 @@ public class BasketPanel extends JPanel {
 		JPanel centerPanel = new JPanel();
 		centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.Y_AXIS));
 		
-		this.basketTable = new LectureTable();
+		this.basketTable = new MainLectureTable();
 		JScrollPane basketScrollPane = new JScrollPane();
 		basketScrollPane.setViewportView(this.basketTable);
 		basketScrollPane.setPreferredSize(new Dimension(Attributes.COMMON_WIDTH.getValue(), Attributes.LECTURE_HEIGHT.getValue()));

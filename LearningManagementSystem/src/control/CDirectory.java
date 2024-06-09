@@ -3,6 +3,7 @@ package control;
 import java.util.Vector;
 
 import dao.DAODirectory;
+import domain.Path;
 import entity.EDirectory;
 
 public class CDirectory {
@@ -14,7 +15,7 @@ public class CDirectory {
 	}
 	
 	public Vector<EDirectory> getItems(String path) {
-		return this.daoDirectory.getItems(path);
+		return this.daoDirectory.getItems(Path.DATA_LECTURE.getPath()+path+".txt");
 	}
 	
 

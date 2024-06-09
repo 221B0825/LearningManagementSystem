@@ -13,7 +13,7 @@ import javax.swing.border.EmptyBorder;
 import domain.Attributes;
 import domain.Path;
 import ui.DirectoryComboBox;
-import ui.LectureTable;
+import ui.MainLectureTable;
 
 public class DirectoryPanel extends JPanel {
 	
@@ -22,7 +22,7 @@ public class DirectoryPanel extends JPanel {
 	private DirectoryComboBox campusComboBox;
 	private DirectoryComboBox collegeComboBox;
 	private DirectoryComboBox departmentComboBox;
-	private LectureTable lectureTable;
+	private MainLectureTable lectureTable;
 	
 	public DirectoryPanel() {
 		
@@ -58,7 +58,7 @@ public class DirectoryPanel extends JPanel {
 		JPanel lecturePanel = new JPanel();
 		
 		JScrollPane scrollpane = new JScrollPane();
-		this.lectureTable = new LectureTable();
+		this.lectureTable = new MainLectureTable();
 		scrollpane.setViewportView(this.lectureTable);
 		scrollpane.setPreferredSize(new Dimension(Attributes.COMMON_WIDTH.getValue(), Attributes.LECTURE_HEIGHT.getValue()));
 		lecturePanel.add(scrollpane);
@@ -81,21 +81,21 @@ public class DirectoryPanel extends JPanel {
 		private void refresh(Object source) {
 			if(source == null) {
 				String hyperLink = campusComboBox.refresh(Path.DATA_ROOT.getPath());
-				hyperLink = collegeComboBox.refresh(Path.DATA_LECTURE.getPath()+hyperLink+".txt");
-				hyperLink = departmentComboBox.refresh(Path.DATA_LECTURE.getPath()+hyperLink+".txt");
-				lectureTable.refresh(Path.DATA_LECTURE.getPath()+hyperLink+".txt");
+				hyperLink = collegeComboBox.refresh(hyperLink);
+				hyperLink = departmentComboBox.refresh(hyperLink);
+				lectureTable.refresh(hyperLink);
 			}else if(source == campusComboBox) {
 				String hyperLink = campusComboBox.getSelectedHyperLink();
-				hyperLink = collegeComboBox.refresh(Path.DATA_LECTURE.getPath()+hyperLink+".txt");
-				hyperLink = departmentComboBox.refresh(Path.DATA_LECTURE.getPath()+hyperLink+".txt");
-				lectureTable.refresh(Path.DATA_LECTURE.getPath()+hyperLink+".txt");
+				hyperLink = collegeComboBox.refresh(hyperLink);
+				hyperLink = departmentComboBox.refresh(hyperLink);
+				lectureTable.refresh(hyperLink);
 			}else if(source == collegeComboBox) {
 				String hyperLink = collegeComboBox.getSelectedHyperLink();
-				hyperLink = departmentComboBox.refresh(Path.DATA_LECTURE.getPath()+hyperLink+".txt");
-				lectureTable.refresh(Path.DATA_LECTURE.getPath()+hyperLink+".txt");
+				hyperLink = departmentComboBox.refresh(hyperLink);
+				lectureTable.refresh(hyperLink);
 			}else if(source == departmentComboBox) {
 				String hyperLink = departmentComboBox.getSelectedHyperLink();
-				lectureTable.refresh(Path.DATA_LECTURE.getPath()+hyperLink+".txt");
+				lectureTable.refresh(hyperLink);
 			}
 		}
 

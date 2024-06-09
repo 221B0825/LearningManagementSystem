@@ -9,7 +9,7 @@ public class Main {
 //		LoginFrame loginFrame = new LoginFrame();
 //		loginFrame.setVisible(true);
 		
-		MainFrame mainFrame = new MainFrame("test");
+		MainFrame mainFrame = new MainFrame("user");
 		mainFrame.setVisible(true);
 	}
 }

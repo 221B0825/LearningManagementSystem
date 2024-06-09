@@ -17,7 +17,7 @@ import javax.swing.table.TableColumn;
 import control.CLecture;
 import entity.ELecture;
 
-public class LectureTable extends JTable {
+public abstract class LectureTable extends JTable {
 
     // service
     private CLecture cLecture;
@@ -25,31 +25,32 @@ public class LectureTable extends JTable {
     // real data
     private Vector<ELecture> lectures;
 
+    private String[] columnNames;
+    
     // table model
     private DefaultTableModel lectureModel;
-
-    public LectureTable() {
+	
+	public LectureTable() {
         // set service
         this.cLecture = new CLecture();
-
         // set table model
-        String[] columnNames = { "Name", "Professor", "Credit", "Time", "Add Basket" };
-        this.lectureModel = new DefaultTableModel(null, columnNames);
-        this.setModel(lectureModel);
+        this.columnNames = new String[]{"Name", "Professor", "Credit", "Time", " "};
+        
 
+	}
+    
+    public void initTableModel(String lastColumnName) {
+    	this.columnNames[this.columnNames.length-1] = lastColumnName;
+    	this.lectureModel = new DefaultTableModel(null, columnNames);
+        this.setModel(lectureModel);
+        
         // set cell renderer "Add Basket"
         TableColumn basketColumn = this.getColumnModel().getColumn(4);
         basketColumn.setCellRenderer(new BasketCellRenderer());
 
         this.addMouseListener(new BasketAddListener());
-
     }
-
-    @Override
-    public TableCellEditor getCellEditor(int row, int column) {
-        // non-editable
-        return null;
-    }
+    
 
     public void refresh(String path) {
         // get row data
@@ -68,9 +69,16 @@ public class LectureTable extends JTable {
             row.add(""); // "Add Basket"
             this.lectureModel.addRow(row);
         }
-
         this.updateUI();
     }
+    
+    
+    @Override
+    public TableCellEditor getCellEditor(int row, int column) {
+        // non-editable
+        return null;
+    }
+
 
     private class BasketCellRenderer extends JButton implements TableCellRenderer {
 

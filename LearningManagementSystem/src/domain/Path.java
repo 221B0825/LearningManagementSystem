@@ -2,8 +2,9 @@ package domain;
 
 public enum Path {
 	
-	DATA_ROOT("data\\lecture\\root.txt"),
+	DATA_ROOT("root"),
 	DATA_LECTURE("data\\lecture\\"),
+	DATA_BASKET("data\\basket"),
     USER_ICON("assets\\icons\\userIcon.png"),
     BANNER_IMAGE_1("assets\\banners\\banner1.png"),
 	BANNER_IMAGE_2("assets\\banners\\banner2.png"),

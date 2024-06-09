@@ -7,15 +7,16 @@ import java.util.Vector;
 
 import entity.ELecture;
 
-public class DAOLecture {
+public class DAOBasket {
 
 	public Vector<ELecture> getItems(String path) {
 		Vector<ELecture> items = new Vector<ELecture>();
-
+		
 		File file = new File(path);
+		
 		try {
 			Scanner scanner = new Scanner(file);
-			while (scanner.hasNext()) {
+			while(scanner.hasNext()) {
 				ELecture eLecture = new ELecture();
 				eLecture.setNumber(scanner.next());
 				eLecture.setName(scanner.next());
@@ -24,10 +25,11 @@ public class DAOLecture {
 				eLecture.setTime(scanner.next());
 				items.add(eLecture);
 			}
-			return items;
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
+
 }
