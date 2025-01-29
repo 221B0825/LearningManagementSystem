@@ -55,7 +55,7 @@ LearningManagementSystem
 ---
 
 ## 📧 Contact
-- **이름**: Eunseo Yu  
-- **이메일**: eunseoyu0825@gmail.com  
+- **Name**: Eunseo Yu  
+- **E-mail**: eunseoyu0825@gmail.com  
 - **GitHub**: [221b0825](https://github.com/221b0825)  
 
