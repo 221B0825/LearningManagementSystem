@@ -3,7 +3,7 @@ Using Java in 2019
 📌: Learning MVC Pattern  
 
 [![License](https://img.shields.io/github/license/221b0825/LearningManagementSystem)](LICENSE)  
-[![Last Commit](https://img.shields.io/github/last-commit/221b0825/LearningManagementSystem)](https://github.com/221b0825/UnivLMS/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/221b0825/LearningManagementSystem)](https://github.com/221b0825/LearningManagementSystem/commits/main)
 
 ## 🚀 Introduction
 
