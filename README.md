@@ -1,13 +1,22 @@
 # 📕Learning Management System
 Using Java in 2019   
-📌: Learning MVC Pattern  
+📌: Improving MVC Pattern (2024)
 
 [![License](https://img.shields.io/github/license/221b0825/LearningManagementSystem)](LICENSE)  
 [![Last Commit](https://img.shields.io/github/last-commit/221b0825/LearningManagementSystem)](https://github.com/221b0825/LearningManagementSystem/commits/main)
 
 ## 🚀 Introduction
 
-> 이 프로젝트는 **Java**를 사용하여 MVC 패턴을 이해하고, **AWT**를 통해 UI를 설계하며, 이벤트 처리에 대한 이해를 높이는 것을 목표로 합니다.  
+이 프로젝트는 2019년에 진행된 **UnivLMS** Java 프로젝트를 기반으로 2024년에 개선한 버전입니다.  
+기존 프로젝트의 **UI 디자인을 개선하고, 코드 구조를 리팩토링하여 유지보수성을 높이는 것**을 목표로 했습니다.  
+
+### 🔹 주요 개선 사항  
+- **UI 개편**: 기존 UI에서 보다 직관적이고 현대적인 디자인 적용  
+- **코드 리팩토링**: MVC 패턴을 명확하게 적용하고, 가독성과 유지보수성 개선  
+- **이벤트 처리 최적화**: 보다 효율적인 이벤트 핸들링으로 성능 향상  
+
+이 프로젝트는 **Java 기반의 UI 설계 및 MVC 패턴을 학습하고 싶은 개발자**를 위한 학습용 프로젝트입니다. 
+
 ---
 
 ## 📸 Preview  
