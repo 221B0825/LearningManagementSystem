@@ -1,6 +1,6 @@
 # 📕Learning Management System
-Using Java in 2019   
-📌: Enhancing UnivLMS (2024)
+Using Java in 2024  
+📌: Upgrading **UnivLMS** (Originally Developed in 2019)
 
 [![License](https://img.shields.io/github/license/221b0825/LearningManagementSystem)](LICENSE)  
 [![Last Commit](https://img.shields.io/github/last-commit/221b0825/LearningManagementSystem)](https://github.com/221b0825/LearningManagementSystem/commits/main)
